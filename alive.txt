@@ -1,2 +1,2 @@
-https://paypal.com
-https://yahoo.com
+https://finance.yahoo.com
+http://finance.yahoo.com
