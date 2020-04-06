@@ -40,7 +40,8 @@ done
 fi
 
 go get -u -v github.com/ffuf/ffuf
-
+go get -u -v github.com/lc/gau
+go get -u -v github.com/tomnomnom/unfurl
 sudo apt-get install -y jq
 sudo apt-get install -y xargs
 
