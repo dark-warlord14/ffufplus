@@ -1,2 +1,4 @@
-https://finance.yahoo.com
+http://yahoo.com
+https://yahoo.com
 http://finance.yahoo.com
+https://finance.yahoo.com

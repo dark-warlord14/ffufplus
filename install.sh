@@ -1,12 +1,5 @@
 #!/bin/bash
 
-mkdir ~/tools
-mkdir ~/tools/wordlist
-cd ~/tools/wordlist
-wget https://github.com/assetnote/commonspeak2-wordlists/blob/master/subdomains/subdomains.txt?raw=true -o vhost.txt
-wget https://raw.githubusercontent.com/maurosoria/dirsearch/master/db/dicc.txt
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/burp-parameter-names.txt -o param.txt
-
 #install go
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
