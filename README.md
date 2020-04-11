@@ -5,7 +5,7 @@ To install dependencies run the command
 bash install.sh
 ```
 
-To use the script run the command 
+Eg. To use the script in Beast Mode, run the command 
 ```
-bash script.sh
+bash script.sh 4
 ```
