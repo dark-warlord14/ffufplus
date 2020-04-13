@@ -24,4 +24,4 @@ bash script.sh
 
 ### Thanks
 
-- [@joohoi]([https://twitter.com/joohoi](https://twitter.com/joohoi)) - for the great ffuf
+- [@joohoi](https://twitter.com/joohoi) - for the great ffuf
