@@ -39,7 +39,7 @@ sudo apt-get install -y jq
 sudo apt-get install -y xargs
 
 #install findomain
-if [[ findomain == *"finomain" ]];then
+if [[ findomain == *"findomain" ]];then
 echo "Ok, Findomain tool is installed";
 else
 echo "Tool is not installed, would you like to install it?"
