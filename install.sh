@@ -1,6 +1,5 @@
 #!/bin/bash
-
-#install go
+#install findomain
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
 PS3="Please select an option : "
@@ -33,8 +32,34 @@ done
 fi
 
 go get -u -v github.com/ffuf/ffuf
+go get -u -v github.com/tomnomnom/httprobe
 go get -u -v github.com/lc/gau
 go get -u -v github.com/tomnomnom/unfurl
 sudo apt-get install -y jq
 sudo apt-get install -y xargs
 
+#install findomain
+if [[ findomain == *"finomain" ]];then
+echo "Ok, Findomain tool is installed";
+else
+echo "Tool is not installed, would you like to install it?"
+PS3="Please select an option"
+choices=("Yes" "no")
+select choice in "${choices[@]}"; do
+case $choice in
+         Yes)
+wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux
+chnmod +x findomain-linux
+mv findomain-linux /usr/bin/findomain
+sleep 1
+break
+;;
+         no)
+echo "Please install findomain or move findomain to bin folder"
+exit 1
+;;
+
+esac
+
+done
+fi

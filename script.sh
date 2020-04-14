@@ -3,10 +3,21 @@
 printf "\nffuf on Steroids\n\n"
 PS3="
 Select one of the options from above : "
-choices=("Directory BruteForcing" "Parameter Discovery" "VHOST Discovery" "Parse waybackurls" "Beast Mode")
+choices=("Subdomain Enum using Findomain + alive domains" "Directory BruteForcing" "Parameter Discovery" "VHOST Discovery" "Parse waybackurls" "Beast Mode")
 select choice in "${choices[@]}"; do
         case $choice in
-		"Directory BruteForcing")
+
+
+                "Subdomain Enum using Findomain + alive domains")
+                        printf "\nSubdomain Enumeration + alive domaains"
+                        printf "\n\nEnter the url for Subdomain Enumeration: "
+                        read input1
+                        findomain -t "$input1" -u subd.txt
+cat subd.txt | httprobe -c 100 | tee -a alive.txt
+                        printf "\nDone. Result of subdomains stored in subd.txt and  alive domain in alives.txt\n"
+                        break
+                        ;;
+                "Directory BruteForcing")
 			printf "\nDirectory Bruteforcing"
 			printf "\n\nEnter the url for Directory Bruteforcing: "
 			read input1
@@ -53,8 +64,9 @@ select choice in "${choices[@]}"; do
 			printf "\nDone. Result is stored in result_beast.txt\n"
                         break
                         ;;
-                *)
+*)
                         echo "Invalid option"
                         ;;
-        esac
+
+                     esac
 done
